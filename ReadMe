@@ -7,7 +7,7 @@ THE DATA:
 	dontpatronizeme_pcl.tsv --> Contains paragraphs annotated with a label from 0 (not containing PCL) to 4 (being highly patronizing or condescending) 
 	towards vulnerable communities.
 
-	dontpatronizeme_categories.tsv --> Contains the paragraphs annotated as containing PCL in the previous subdataset (labels 2, 3 or 4) with annotations on the 			strategies (categories) used to express the condescension. The categories are as follows:
+	dontpatronizeme_categories.tsv --> Contains the paragraphs annotated as containing PCL in the previous subdataset (labels 2, 3 or 4) with annotations on the strategies (categories) used to express the condescension. The categories are as follows:
 
 			– Unbalanced power relations. By means of the language, the author distances themselves from the community or the situation they are talking about and expresses the will, capacity or responsibility to help them. It is also present when the author entitles themselves to give something positive to others in a more vulnerable situation, especially when what the author concedes is a right which they do not have any authority to decide to give.
 
