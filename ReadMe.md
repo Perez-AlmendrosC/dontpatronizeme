@@ -1,8 +1,3 @@
-
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Don't Patronize Me! dataset</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://aclanthology.org/2020.coling-main.518/" property="cc:attributionName" rel="cc:attributionURL">Carla Perez-Almendros, Luis Espinosa-Anke and Steven Schockaert</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional License</a>.<br />Creado a partir de la obra en <a xmlns:dct="http://purl.org/dc/terms/" href="https://aclanthology.org/2020.coling-main.518/" rel="dct:source">https://aclanthology.org/2020.coling-main.518/</a>.
-
-
 ## REQUEST ACCESS TO THE DATA
 If you would like to use the Don't Patronize Me! dataset for research porpuses, please, fill in the following form and we will send it to you as soon as possible: 
 https://forms.gle/VN8hwbdGYkf5KHiKA
