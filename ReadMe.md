@@ -50,7 +50,7 @@ If you use this dataset or code, please cite:
 
 @inproceedings{perez-almendros2020dontpatronizeme,
   title={Don’t Patronize Me! An Annotated Dataset with Patronizing and Condescending Language towards Vulnerable Communities},
-  author={Almendros, Carla Perez and Anke, Luis Espinosa and Schockaert, Steven},
+  author={Perez-Almendros, Carla and Espinosa-Anke, Luis and Schockaert, Steven},
   booktitle={Proceedings of the 28th International Conference on Computational Linguistics},
   pages={5891--5902},
   year={2020}
