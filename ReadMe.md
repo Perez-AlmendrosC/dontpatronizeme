@@ -1,3 +1,8 @@
+## DISCLAIMER
+
+The Don’t Patronize Me! dataset has been created for research purposes. Patronizing and Condescending Language (PCL) towards vulnerable communities is understood in this dataset as a commonly used, generally unconscious and well intended writing style. We consider that the authors of the paragraphs included in this dataset do not intend any harm towards the vulnerable communities they talk about and we reckon that their objective is to support these communities and/or raise awareness towards difficult situations. 
+The Don’t Patronize Me! dataset can only be used for research purposes. 
+
 ## REQUEST ACCESS TO THE DATA
 If you would like to use the Don't Patronize Me! dataset for research porpuses, please, fill in the following form and we will send it to you as soon as possible: 
 https://forms.gle/VN8hwbdGYkf5KHiKA
@@ -5,11 +10,22 @@ https://forms.gle/VN8hwbdGYkf5KHiKA
 
 ## THE DATA
 
-The Don't Patronize Me! dataset contains paragraphs from news stories about vulnerable communities with Patronizing and Condescending Language (PCL) annotations.
+The Don’t Patronize Me! dataset has been created for research purposes. It includes paragraphs extracted from news stories published in 20 English-speaking countries which mention at least one of the following keywords related to potentially vulnerable or under-represented communities: disabled, homeless, hopeless, immigrant, in need, migrant, poor families, refugee, vulnerable or women, with Patronizing and Condescending Language (PCL) annotations.
 
-**dontpatronizeme_pcl.tsv** --> Contains paragraphs annotated with a label from 0 (not containing PCL) to 4 (being highly patronizing or condescending) towards vulnerable communities.
 
-**dontpatronizeme_categories.tsv** --> Contains the paragraphs annotated as containing PCL in the previous subdataset (labels 2, 3 or 4) with annotations on the strategies (categories) used to express the condescension. The categories are as follows:
+**dontpatronizeme_pcl.tsv** --> Contains paragraphs annotated with a label from 0 (not containing PCL) to 4 (being highly patronizing or condescending) towards vulnerable communities. 
+
+> The format of each line is: 
+> 
+>paragraph_id   keyword   country_code   paragraph   label
+
+**dontpatronizeme_categories.tsv** --> Contains the paragraphs annotated as containing PCL in the previous subdataset (labels 2, 3 or 4) with annotations on the strategies (categories) to express the condescension and the exact text span where the PCL occurs. 
+
+>The format of each line is:
+>
+>paragraph_id   paragraph   keyword   country_code   span_start   span_end   span_text   category_label   number_of_annotators_agreeing_in_that_label
+
+The categories are as follows:
 
   ***Unbalanced power relations***. By means of the language, the author distances themselves from the community or the situation they are talking about and expresses the will, capacity or responsibility to help them. It is also present when the author entitles themselves to give something positive to others in a more vulnerable situation, especially when what the author concedes is a right which they do not have any authority to decide to give.
 
