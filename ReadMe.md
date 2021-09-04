@@ -1,6 +1,6 @@
 ## _IMPORTANT NOTE TO SEMEVAL 2022 PARTICIPANTS_
 
-The [semeval-2022](https://github.com/Perez-AlmendrosC/dontpatronizeme/tree/master/semeval-2022) folder in this repo shows the scoring script and illustrates the format of the predictions file that you must submit to Codalab during the evaluation phase. _It does not contain the actual dataset_, which is available upon request (please continue reading).
+The [semeval-2022](https://github.com/Perez-AlmendrosC/dontpatronizeme/tree/master/semeval-2022) folder in this repo shows the scoring script and illustrates the format of the predictions file that you must submit to Codalab during the evaluation phase. _It does not contain the actual dataset_, which is available [upon request](https://forms.gle/VN8hwbdGYkf5KHiKA).
 
 This folder contains: 
 
