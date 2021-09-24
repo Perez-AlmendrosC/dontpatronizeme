@@ -49,12 +49,11 @@ task2_avg:0.49361633052970777
 
 ### Key dates
 
-- ~~Training data ready: August, 2021~~
-- Evaluation data ready: Mid December, 2021
-- Evaluation start: January 10, 2022
-- Evaluation end: by January 31, 2022
-- Paper submissions due (estimate): February 23, 2022
-- Notification to authors (estimate): March 31, 2022
+- ~~Training data available: September 3, 2021 (ALREADY AVAILABLE!)~~
+- Evaluation Start: January 10, 2022
+- Evaluation End: January 31, 2022
+- Paper submissions due: February 23, 2022
+- Notification to authors: March 31, 2022
 
 ### Task organizers
 
