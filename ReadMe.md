@@ -109,11 +109,13 @@ The categories are as follows:
 
 ## THE CODE
 
+Coming soon...
 
 ## CITATION
 
 If you use this dataset or code, please cite:
 
+```
 @inproceedings{perez-almendros2020dontpatronizeme,
   title={Don’t Patronize Me! An Annotated Dataset with Patronizing and Condescending Language towards Vulnerable Communities},
   author={Perez-Almendros, Carla and Espinosa-Anke, Luis and Schockaert, Steven},
@@ -121,3 +123,4 @@ If you use this dataset or code, please cite:
   pages={5891--5902},
   year={2020}
 }
+```
