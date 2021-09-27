@@ -6,13 +6,13 @@ If you are participating in **SemEval-2022 Task4 - Patronizing and Condescending
 
 In this task, we invite participants to detect patronizing and condescending language (PCL) in paragraphs extracted from news articles in English. Given a paragraph, systems must predict whether it contains condescending language or not (Subtask 1), and whether it contains any of the 7 categories identified in the PCL taxonomy introduced in [Perez-Almendros et al. (2020)](https://aclanthology.org/2020.coling-main.518/) (Subtask 2). Further information can be found [here](https://sites.google.com/view/pcl-detection-semeval2022/).
 
+### Get the training data
+
+Available [upon request](https://forms.gle/VN8hwbdGYkf5KHiKA).
+
 ### Quick start!
 
 We provide a Jupyter notebook which shows how to: (1) load training data for both subtasks; (2) generate predictions in the format expected by Codalab, which you should replicate when you submit your system runs; (3) call the official task scorer; and (4) output results on a text file: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1vNPVN5w_O48pjtRGYhb5hS0sNXThfBwL?usp=sharing)
-
-### Training data
-
-Available [upon request](https://forms.gle/VN8hwbdGYkf5KHiKA).
 
 ### Baselines
 
