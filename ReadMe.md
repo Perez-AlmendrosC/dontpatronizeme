@@ -1,3 +1,68 @@
+## :robot: IMPORTANT NOTE TO SEMEVAL 2022 PARTICIPANTS :robot:
+
+If you are participating in **SemEval-2022 Task4 - Patronizing and Condescending Language Detection**, below you can find useful information:
+
+### Problem description and subtasks
+
+In this task, we invite participants to detect patronizing and condescending language (PCL) in paragraphs extracted from news articles in English. Given a paragraph, systems must predict whether it contains condescending language or not (Subtask 1), and whether it contains any of the 7 categories identified in the PCL taxonomy introduced in [Perez-Almendros et al. (2020)](https://aclanthology.org/2020.coling-main.518/) (Subtask 2). Further information can be found [here](https://competitions.codalab.org/competitions/34344#learn_the_details-overview).
+
+### Training data
+
+Available [upon request](https://forms.gle/VN8hwbdGYkf5KHiKA).
+
+### Baselines
+
+We will consider two baselines.
+
+- A random baseline.
+- A baseline based on pretrained language models. **We will publish a Google Colab notebook soon**.
+
+### Submission format and evaluation metrics
+
+The [semeval-2022](https://github.com/Perez-AlmendrosC/dontpatronizeme/tree/master/semeval-2022) folder in this repo shows the scoring script and illustrates the format of the predictions file that you must submit to Codalab during the evaluation phase. _It does not contain the actual dataset_.
+
+This folder contains: 
+
+- An example `submission.zip` ([submission.zip](https://github.com/Perez-AlmendrosC/dontpatronizeme/blob/master/semeval-2022/submission.zip)) file, which shows the format of the predictions file that you must upload to Codalab. It is a zip file with two output files: `task1.txt` and `task2.txt`, which are the predictions of your system. You may only participate in one of the subtasks by including either `task1.txt` or `task2.txt` alone.
+- A `data` ([data/](https://github.com/Perez-AlmendrosC/dontpatronizeme/tree/master/semeval-2022/data)) folder, which contains two subdirectories: `ref` (which contains gold labels for both subtasks), and `res` (which contains predicted labels for both subtasks). This is the format expected by Codalab scoring scripts (see below), but this is done automatically by the system when you submit your `submission.zip` system runs. **Note that the contents of the `ref` and `res` folders we provide have been generated randomly, and are there simply to be able to call the evaluation script and generate a file with predictions.**
+- A script `evaluation.py` ([evaluation.py](https://github.com/Perez-AlmendrosC/dontpatronizeme/blob/master/semeval-2022/evaluation.py)) as it is deployed in Codalab. This script takes two arguments as input: (1) an `input directory`, which, in this example, should be the ([data/](https://github.com/Perez-AlmendrosC/dontpatronizeme/tree/master/semeval-2022/data)) folder; and (2) an `output directory`, where the script will write a `scores.txt` file, with results for both subtasks (evaluation metrics described [here](https://competitions.codalab.org/competitions/34344#learn_the_details-evaluation)). If you run the following command after cloning this repo:
+
+```
+python3 semeval-2022/evaluation.py semeval-2022/data/ semeval-2022/data/
+```
+
+... it will save a `scores.txt` file in the `semeval-2022/data` folder with the following contents.:
+
+```
+task1_precision:0.54
+task1_recall:0.47368421052631576
+task1_f1:0.5046728971962616
+task2_unb:0.4489795918367347
+task2_sha:0.5473684210526316
+task2_pre:0.52
+task2_aut:0.4615384615384615
+task2_met:0.5283018867924528
+task2_com:0.5360824742268041
+task2_the:0.4130434782608696
+task2_avg:0.49361633052970777
+```
+
+### Key dates
+
+- ~~Training data available: September 3, 2021 (ALREADY AVAILABLE!)~~
+- Evaluation Start: January 10, 2022
+- Evaluation End: January 31, 2022
+- Paper submissions due: February 23, 2022
+- Notification to authors: March 31, 2022
+
+### Task organizers
+
+[Carla Pérez-Almendros](https://sites.google.com/view/pcl-detection-semeval2022/organizers?authuser=0#h.bqsxq2rlfhth), [Luis Espinosa-Anke](https://sites.google.com/view/pcl-detection-semeval2022/organizers?authuser=0#h.yhdsaayicnzo) and [Steven Schockaert](https://sites.google.com/view/pcl-detection-semeval2022/organizers?authuser=0#h.27dd2fnrzjer).
+
+
+:robot: End of SemEval information :robot:
+---
+
 ## DISCLAIMER
 
 The Don’t Patronize Me! dataset has been created for research purposes. Patronizing and Condescending Language (PCL) towards vulnerable communities is understood in this dataset as a commonly used, generally unconscious and well intended writing style. We consider that the authors of the paragraphs included in this dataset do not intend any harm towards the vulnerable communities they talk about and we reckon that their objective is to support these communities and/or raise awareness towards difficult situations. 
@@ -43,11 +108,13 @@ The categories are as follows:
 
 ## THE CODE
 
+Coming soon...
 
 ## CITATION
 
 If you use this dataset or code, please cite:
 
+```
 @inproceedings{perez-almendros2020dontpatronizeme,
   title={Don’t Patronize Me! An Annotated Dataset with Patronizing and Condescending Language towards Vulnerable Communities},
   author={Perez-Almendros, Carla and Espinosa-Anke, Luis and Schockaert, Steven},
@@ -55,3 +122,4 @@ If you use this dataset or code, please cite:
   pages={5891--5902},
   year={2020}
 }
+```
