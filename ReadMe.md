@@ -12,7 +12,9 @@ Available [upon request](https://forms.gle/VN8hwbdGYkf5KHiKA).
 
 ### Quick start!
 
-We provide a Jupyter notebook which shows how to: (1) load training data for both subtasks; (2) generate predictions in the format expected by Codalab, which you should replicate when you submit your system runs; (3) call the official task scorer; and (4) output results on a text file: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1vNPVN5w_O48pjtRGYhb5hS0sNXThfBwL?usp=sharing)
+We provide a Jupyter notebook which shows how to: (1) load training data for both subtasks; (2) generate predictions in the format expected by Codalab, which you should replicate when you submit your system runs; (3) call the official task scorer; and (4) output results on a text file. 
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1vNPVN5w_O48pjtRGYhb5hS0sNXThfBwL?usp=sharing)
 
 ### Baselines
 
