@@ -36,7 +36,7 @@ class DontPatronizeMe:
 		df=pd.DataFrame(rows)#, columns=['text', 'labels']) 
 		self.train_task1_df = df
 
-	def load_task2(self):
+	def load_task2(self, return_one_hot=False):
 		# Reads the data for task 2 and present it as paragraphs with binarized labels (a list with seven positions, "activated or not (1 or 0)",
 		# depending on wether the category is present in the paragraph).
 		# It returns a pandas dataframe with paragraphs and list of binarized labels.
@@ -61,8 +61,9 @@ class DontPatronizeMe:
 		labels=[]
 		for line in data.values():
 			labels.append(line)
-		labels_bin = MultiLabelBinarizer().fit_transform(labels)
-		df = pd.DataFrame(list(zip(pars, labels_bin)), columns=['text', 'labels'])
+		if return_one_hot:
+			labels = MultiLabelBinarizer().fit_transform(labels)
+		df = pd.DataFrame(list(zip(pars, labels)), columns=['text', 'labels'])
 		self.train_task2_df = df
 
 
