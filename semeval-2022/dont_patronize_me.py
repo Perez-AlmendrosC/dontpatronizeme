@@ -23,6 +23,7 @@ class DontPatronizeMe:
 		rows=[]
 		with open(os.path.join(self.train_path, 'dontpatronizeme_pcl.tsv')) as f:
 			for line in f.readlines()[4:]:
+				_id = line.strip().split('\t')[0]
 				t=line.strip().split('\t')[3].lower()
 				l=line.strip().split('\t')[-1]
 				if l=='0' or l=='1':
@@ -30,7 +31,8 @@ class DontPatronizeMe:
 				else:
 					lbin=1
 				rows.append(
-					{'text':t, 
+					{'ids':_id,
+					'text':t, 
 					'labels':lbin}
 					)
 		df=pd.DataFrame(rows)#, columns=['text', 'labels']) 
@@ -49,21 +51,26 @@ class DontPatronizeMe:
 		data = defaultdict(list)
 		with open (os.path.join(self.train_path, 'dontpatronizeme_categories.tsv')) as f:
 			for line in f.readlines()[4:]:
-				#print('line:',line)
+				_id = line.strip().split('\t')[0]
 				text=line.split('\t')[1].lower()
 				label=line.strip().split('\t')[-2]
 				labelid = tag2id[label]
-				if not labelid in data[text]:
-					data[text].append(labelid)
+				#print(_id,text,labelid)
+				#input('--')
+				if not labelid in data[(_id,text)]:
+					data[(_id,text)].append(labelid)
 		pars=[]
-		for line in data.keys():
+		_ids = []
+		print(data.keys())
+		for _id,line in data.keys():
+			_ids.append(_id)
 			pars.append(line)
 		labels=[]
 		for line in data.values():
 			labels.append(line)
 		if return_one_hot:
 			labels = MultiLabelBinarizer().fit_transform(labels)
-		df = pd.DataFrame(list(zip(pars, labels)), columns=['text', 'labels'])
+		df = pd.DataFrame(list(zip(_ids, pars, labels)), columns=['ids', 'text', 'labels'])
 		self.train_task2_df = df
 
 
