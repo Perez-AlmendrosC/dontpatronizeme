@@ -23,19 +23,27 @@ class DontPatronizeMe:
 		rows=[]
 		with open(os.path.join(self.train_path, 'dontpatronizeme_pcl.tsv')) as f:
 			for line in f.readlines()[4:]:
-				_id = line.strip().split('\t')[0]
-				t=line.strip().split('\t')[3].lower()
+				par_id=line.strip().split('\t')[0]
+				art_id = line.strip().split('\t')[1]
+				keyword=line.strip().split('\t')[2]
+				country=line.strip().split('\t')[3]
+				t=line.strip().split('\t')[4].lower()
 				l=line.strip().split('\t')[-1]
 				if l=='0' or l=='1':
 					lbin=0
 				else:
 					lbin=1
 				rows.append(
-					{'ids':_id,
+					{'par_id':par_id,
+					'art_id':art_id,
+					'keyword':keyword,
+					'country':country,
 					'text':t, 
-					'labels':lbin}
+					'label':lbin, 
+					'orig_label':l
+					}
 					)
-		df=pd.DataFrame(rows)#, columns=['text', 'labels']) 
+		df=pd.DataFrame(rows, columns=['par_id', 'art_id', 'keyword', 'country', 'text', 'label', 'orig_label']) 
 		self.train_task1_df = df
 
 	def load_task2(self, return_one_hot=False):
@@ -48,29 +56,55 @@ class DontPatronizeMe:
 				label=line.strip().split('\t')[-2]
 				if not label in tag2id:
 					tag2id[label] = len(tag2id)
+		print(tag2id)
 		data = defaultdict(list)
 		with open (os.path.join(self.train_path, 'dontpatronizeme_categories.tsv')) as f:
 			for line in f.readlines()[4:]:
-				_id = line.strip().split('\t')[0]
-				text=line.split('\t')[1].lower()
+				par_id=line.strip().split('\t')[0]
+				art_id = line.strip().split('\t')[1]
+				text=line.split('\t')[2].lower()
+				keyword=line.split('\t')[3]
+				country=line.split('\t')[4]
+				start=line.split('\t')[5]
+				finish=line.split('\t')[6]
+				text_span=line.split('\t')[7]
 				label=line.strip().split('\t')[-2]
+				num_annotators=line.strip().split('\t')[-1]
 				labelid = tag2id[label]
-				#print(_id,text,labelid)
-				#input('--')
-				if not labelid in data[(_id,text)]:
-					data[(_id,text)].append(labelid)
+				if not labelid in data[(par_id, art_id, text, keyword, country)]:
+					data[(par_id,art_id, text, keyword, country)].append(labelid)
+
+		par_ids=[]
+		art_ids=[]
 		pars=[]
-		_ids = []
-		print(data.keys())
-		for _id,line in data.keys():
-			_ids.append(_id)
-			pars.append(line)
+		keywords=[]
+		countries=[]
 		labels=[]
-		for line in data.values():
-			labels.append(line)
+
+		for par_id, art_id, par, kw, co in data.keys():
+			par_ids.append(par_id)
+			art_ids.append(art_id)
+			pars.append(par)
+			keywords.append(kw)
+			countries.append(co)
+
+		for label in data.values():
+			labels.append(label)
+
 		if return_one_hot:
 			labels = MultiLabelBinarizer().fit_transform(labels)
-		df = pd.DataFrame(list(zip(_ids, pars, labels)), columns=['ids', 'text', 'labels'])
+		df = pd.DataFrame(list(zip(par_ids, 
+									art_ids, 
+									pars, 
+									keywords,
+									countries, 
+									labels)), columns=['par_id',
+														'art_id', 
+														'text', 
+														'keyword',
+														'country', 
+														'label',
+														])
 		self.train_task2_df = df
 
 
