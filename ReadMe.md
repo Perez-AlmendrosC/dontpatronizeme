@@ -68,13 +68,13 @@ The Don’t Patronize Me! dataset has been created for research purposes. It inc
 
 > The format of each line is: 
 > 
->paragraph_id   keyword   country_code   paragraph   label
+> paragraph_id <tab> article_id <tab> keyword <tab> country_code <tab> paragraph <tab> label
 
 **dontpatronizeme_categories.tsv** --> Contains the paragraphs annotated as containing PCL in the previous subdataset (labels 2, 3 or 4) with annotations on the strategies (categories) to express the condescension and the exact text span where the PCL occurs. 
 
 >The format of each line is:
 >
->paragraph_id   paragraph   keyword   country_code   span_start   span_end   span_text   category_label   number_of_annotators_agreeing_in_that_label
+> paragraph_id <tab> article_id <tab> paragraph  <tab> keyword  <tab> country_code  <tab> span_start  <tab> span_end  <tab> span_text  <tab> category_label  <tab> number_of_annotators_agreeing_on_that_label
 
 The categories are as follows:
 
