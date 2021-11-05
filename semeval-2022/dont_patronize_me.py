@@ -46,7 +46,7 @@ class DontPatronizeMe:
 		df=pd.DataFrame(rows, columns=['par_id', 'art_id', 'keyword', 'country', 'text', 'label', 'orig_label']) 
 		self.train_task1_df = df
 
-	def load_task2(self, return_one_hot=False):
+	def load_task2(self, return_one_hot=True):
 		# Reads the data for task 2 and present it as paragraphs with binarized labels (a list with seven positions, "activated or not (1 or 0)",
 		# depending on wether the category is present in the paragraph).
 		# It returns a pandas dataframe with paragraphs and list of binarized labels.
@@ -56,7 +56,6 @@ class DontPatronizeMe:
 				label=line.strip().split('\t')[-2]
 				if not label in tag2id:
 					tag2id[label] = len(tag2id)
-		print(tag2id)
 		data = defaultdict(list)
 		with open (os.path.join(self.train_path, 'dontpatronizeme_categories.tsv')) as f:
 			for line in f.readlines()[4:]:
