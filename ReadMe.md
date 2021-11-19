@@ -29,7 +29,7 @@ The [semeval-2022](https://github.com/Perez-AlmendrosC/dontpatronizeme/tree/mast
 
 This folder contains: 
 
-- **New (19 November 2021):** A directory called `practice splits/` where you can find paragraph IDs and labels for a 80/20 (train/dev) split we have generated from the original dataset. With these files and the task data, it is possible to run reconstruct the dataset, run these baselines, and submit them to codalab (under the [Practice](https://competitions.codalab.org/competitions/34344#participate-submit_results) tab). 
+- **New (19 November 2021):** A directory called `practice splits/` where you can find paragraph IDs and labels for a 80/20 (train/dev) split we have generated from the original dataset. With these files and the task data, it is possible to reconstruct the dataset, run the baselines, and submit them to Codalab (under the [Practice](https://competitions.codalab.org/competitions/34344#participate-submit_results) tab). 
   - Random baseline: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11LvmiLmsMNpNXP-J8j7IsuyQ7ezttrCz?usp=sharing)
   - RoBERTa-base baseline: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1M5Qx-FVJYNqFdvpJgggIZaWk5SpGS1Nu?usp=sharing)
 - A `dont_patronize_me.py` ([dont_patronize_me.py](https://github.com/Perez-AlmendrosC/dontpatronizeme/blob/master/semeval-2022/dont_patronize_me.py)) Python script, which you can use to load the training data.
