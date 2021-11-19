@@ -50,12 +50,17 @@ class DontPatronizeMe:
 		# Reads the data for task 2 and present it as paragraphs with binarized labels (a list with seven positions, "activated or not (1 or 0)",
 		# depending on wether the category is present in the paragraph).
 		# It returns a pandas dataframe with paragraphs and list of binarized labels.
-		tag2id = {}
-		with open (os.path.join(self.train_path, 'dontpatronizeme_categories.tsv')) as f:
-			for line in f.readlines()[4:]:
-				label=line.strip().split('\t')[-2]
-				if not label in tag2id:
-					tag2id[label] = len(tag2id)
+		tag2id = {
+				'Unbalanced_power_relations':0,
+				'Shallow_solution':1,
+				'Presupposition':2,
+				'Authority_voice':3,
+				'Metaphors':4,
+				'Compassion':5,
+				'The_poorer_the_merrier':6
+				}
+		print('Map of label to numerical label:')
+		print(tag2id)
 		data = defaultdict(list)
 		with open (os.path.join(self.train_path, 'dontpatronizeme_categories.tsv')) as f:
 			for line in f.readlines()[4:]:
