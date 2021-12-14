@@ -30,11 +30,11 @@ The [semeval-2022](https://github.com/Perez-AlmendrosC/dontpatronizeme/tree/mast
 This folder contains: 
 
 - **New (19 November 2021):** A directory called `practice splits/` where you can find paragraph IDs and labels for a 80/20 (train/dev) split we have generated from the original dataset. With these files and the task data, it is possible to reconstruct the dataset, run the baselines, and submit them to Codalab (under the [Practice](https://competitions.codalab.org/competitions/34344#participate-submit_results) tab). 
-  - Random baseline: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11LvmiLmsMNpNXP-J8j7IsuyQ7ezttrCz?usp=sharing)
-  - RoBERTa-base baseline: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1M5Qx-FVJYNqFdvpJgggIZaWk5SpGS1Nu?usp=sharing)
+    - Random baseline: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11LvmiLmsMNpNXP-J8j7IsuyQ7ezttrCz?usp=sharing)
+    - RoBERTa-base baseline: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1M5Qx-FVJYNqFdvpJgggIZaWk5SpGS1Nu?usp=sharing)
 - A `dont_patronize_me.py` ([dont_patronize_me.py](https://github.com/Perez-AlmendrosC/dontpatronizeme/blob/master/semeval-2022/dont_patronize_me.py)) Python script, which you can use to load the training data.
-- An example `submission.zip` ([submission.zip](https://github.com/Perez-AlmendrosC/dontpatronizeme/blob/master/semeval-2022/submission.zip)) file, which shows the format of the predictions file that you must upload to Codalab. It is a zip file with two text files: `task1.txt` and `task2.txt`, each of which contain 100 random labels corresponding to each subtask.
 - A script `evaluation.py` ([evaluation.py](https://github.com/Perez-AlmendrosC/dontpatronizeme/blob/master/semeval-2022/evaluation.py)) as it is deployed in Codalab. This script takes two arguments as input: (1) an `input directory`, which, in this example, should be the ([data/](https://github.com/Perez-AlmendrosC/dontpatronizeme/tree/master/semeval-2022/data)) folder; and (2) an `output directory`, where the script will write a `scores.txt` file, with results for both subtasks (evaluation metrics described [here](https://competitions.codalab.org/competitions/34344#learn_the_details-evaluation)). 
+- The demo notebook.
 
 ### Key dates
 
