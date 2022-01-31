@@ -11,7 +11,7 @@ class DontPatronizeMe:
 		self.test_path = test_path
 		self.train_task1_df = None
 		self.train_task2_df = None
-		self.test_set = None
+		self.test_set_df = None
 
 	def load_task1(self):
 		"""
@@ -27,7 +27,7 @@ class DontPatronizeMe:
 				art_id = line.strip().split('\t')[1]
 				keyword=line.strip().split('\t')[2]
 				country=line.strip().split('\t')[3]
-				t=line.strip().split('\t')[4].lower()
+				t=line.strip().split('\t')[4]#.lower()
 				l=line.strip().split('\t')[-1]
 				if l=='0' or l=='1':
 					lbin=0
@@ -66,7 +66,7 @@ class DontPatronizeMe:
 			for line in f.readlines()[4:]:
 				par_id=line.strip().split('\t')[0]
 				art_id = line.strip().split('\t')[1]
-				text=line.split('\t')[2].lower()
+				text=line.split('\t')[2]#.lower()
 				keyword=line.split('\t')[3]
 				country=line.split('\t')[4]
 				start=line.split('\t')[5]
@@ -116,7 +116,7 @@ class DontPatronizeMe:
 		#self.test_df = [line.strip() for line in open(self.test_path)]
 		rows=[]
 		with open(self.test_path) as f:
-			for line in f.readlines()[4:]:
-				t=line.strip().split('\t')[3].lower()
+			for line in f:
+				t=line.strip().split('\t')
 				rows.append(t)
-		self.test_set = rows
+		self.test_set_df = pd.DataFrame(rows, columns="par_id art_id keyword country text".split())
