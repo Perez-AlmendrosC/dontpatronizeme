@@ -39,8 +39,8 @@ This folder contains:
 ### Key dates
 
 - ~~Training data available: September 3, 2021 (ALREADY AVAILABLE!)~~
-- --Evaluation Start: January 10, 2022--
-- --Evaluation End: January 31, 2022--
+- ~~Evaluation Start: January 10, 2022~~
+- ~~Evaluation End: January 31, 2022~~
 - Paper submissions due: February 28, 2022
 - Notification to authors: March 31, 2022
 
